@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".PdfDetailActivity">
+    tools:context=".activites.PdfDetailActivity">
 
     <!--ToolBar-->
     <RelativeLayout
@@ -228,6 +228,42 @@
                 android:layout_marginTop="5dp"
                 android:text="Book description"
                 android:textColor="@color/black" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/gray3"
+                android:layout_marginTop="5dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--to show comments-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Comments"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+                <!--add new comment btn-->
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/addCommentBtn"
+                    android:src="@drawable/ic_add_comment_black"
+                    android:background="@android:color/transparent"
+                    android:layout_alignParentEnd="true"
+                    android:padding="10dp"/>
+
+                <!--to show the comments-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/commentsRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/addCommentBtn"
+                    tools:listitem="@layout/row_comment"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            </RelativeLayout>
 
         </LinearLayout>
     </ScrollView>
@@ -247,6 +283,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="10sp"
             android:drawableTop="@drawable/ic_book_white"
             android:text="Read" />
 
@@ -256,9 +293,19 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Download"
+            android:textSize="10sp"
             android:layout_weight="1"
             android:drawableTop="@drawable/ic_save_white"/>
 
+        <!--fev btn-->
+        <Button
+            android:id="@+id/favoriteBtn"
+            android:layout_width="0dp"
+            android:textSize="10sp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_favorite_border_white"
+            android:text="Add To Favorite"
+            android:layout_weight="1"/>
     </LinearLayout>
 
 </RelativeLayout>

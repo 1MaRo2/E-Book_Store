@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".MyApplication"
@@ -18,40 +17,49 @@
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".PdfViewActivity"
+            android:name=".activites.ForgotPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".PdfDetailActivity"
+            android:name=".activites.ProfileEditActivity"
             android:exported="false" />
         <activity
-            android:name=".PdfEditActivity"
+            android:name=".activites.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".PdfListAdminActivity"
+            android:name=".activites.PdfViewActivity"
             android:exported="false" />
         <activity
-            android:name=".PdfAddActivity"
+            android:name=".activites.PdfDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".CategoryAddActivity"
+            android:name=".activites.PdfEditActivity"
             android:exported="false" />
         <activity
-            android:name=".DashboardAdminActivity"
+            android:name=".activites.PdfListAdminActivity"
             android:exported="false" />
         <activity
-            android:name=".DashboardUserActivity"
+            android:name=".activites.PdfAddActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".activites.CategoryAddActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".activites.DashboardAdminActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activites.DashboardUserActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".activites.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activites.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activites.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activites.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
